@@ -1,0 +1,58 @@
+﻿sample_id,mode,folder,filename,background,background_id,person,person_id,person_clothes_id,clothes_id
+1,fixed-camera,test_extra,ao,office,1,male white t-shirt,1,1,1
+2,fixed-camera,test_extra,dlh,classroom,2,male blue hat,2,1,2
+3,fixed-camera,test_extra,ei1,corridor,3,female blue clothes,3,1,4
+4,fixed-camera,test_extra,ew1,white,4,female blue clothes,3,1,4
+5,fixed-camera,test_extra,rb,pillar,5,male brown coat,4,1,6
+6,fixed-camera,test_extra,rkf,common room,6,male black-blue t-shirt,4,2,7
+7,fixed-camera,test_extra,ro,office,1,male red plaid shirt,4,3,8
+8,fixed-camera,test_extra,rs2,wall,7,male brown coat,4,1,6
+9,fixed-camera,test_extra,xk,common room,6,female shirt,5,1,13
+10,fixed-camera,test_extra,xl,classroom,2,female shirt,5,1,13
+11,fixed-camera,test_extra,xo2,lab,8,female sweater,5,2,14
+12,fixed-camera,test_paper,dlh,classroom,2,male blue hat,2,1,2
+13,fixed-camera,test_paper,es2,wall,7,female blue clothes,3,1,4
+14,fixed-camera,test_paper,jl,classroom,2,male black clothes,6,1,15
+15,fixed-camera,test_paper,llh,classroom,2,male black plaid shirt,7,1,16
+16,fixed-camera,test_paper,mpf,study room,9,female red clothes,8,1,18
+17,fixed-camera,test_paper,rpb,study room,9,male black-blue t-shirt,4,2,7
+18,fixed-camera,test_paper,vp,lake painting,10,male black hoodie,9,1,20
+19,fixed-camera,test_paper,vs2,wall,7,male blue hoodie,9,2,21
+20,fixed-camera,test_paper,xk,common room,6,female shirt,5,1,13
+21,fixed-camera,train,ak,common room,6,male white t-shirt,1,1,1
+22,fixed-camera,train,do1,classroom,2,male black hoodie hat,2,2,3
+23,fixed-camera,train,do2,classroom,2,male black hoodie hat,2,2,3
+24,fixed-camera,train,es,parking,11,female blue clothes,3,1,4
+25,fixed-camera,train,klp,classroom,2,male red t-shirt,10,1,24
+26,fixed-camera,train,lo,classroom,2,male gray clothes,7,2,17
+27,fixed-camera,train,mkw,common room,6,female red clothes,8,1,18
+28,fixed-camera,train,mlp,classroom,2,female red clothes,8,1,18
+29,fixed-camera,train,mo2,door,12,female gray clothes,8,2,19
+30,fixed-camera,train,mpb,study room,9,female red clothes,8,1,18
+31,fixed-camera,train,rf,front desk,13,male black iccv clothes,4,4,9
+32,fixed-camera,train,rhw,whiteboard,15,male black iccv clothes,4,4,9
+33,fixed-camera,train,ri1,corridor,3,male blue-green clothes,4,5,10
+34,fixed-camera,train,rml,classroom,2,male black iccv clothes,4,4,9
+35,fixed-camera,train,rpw,study room,9,male black-blue t-shirt,4,2,7
+36,fixed-camera,train,rs,parking,11,male brown coat,4,1,6
+37,fixed-camera,train,vi1,corridor,3,male black t-shirt,9,3,22
+38,fixed-camera,train,vs,parking,11,male blue hoodie,9,2,21
+39,fixed-camera,train,xo,classroom,2,female sweater,5,2,14
+40,fixed-camera,train,yld,classroom,2,female card,11,1,25
+41,fixed-camera,train,yo1,classroom,2,female green coat,11,2,26
+42,hand-held,test_extra,er1,roof,14,female flower clothes,3,2,5
+43,hand-held,test_extra,er2,roof,14,female flower clothes,3,2,5
+44,hand-held,test_extra,rs,building,16,two people,4,7,12
+45,hand-held,test_paper,akh,common room,6,male white t-shirt,1,1,1
+46,hand-held,test_paper,do1h,classroom,2,male black hoodie hat,2,2,3
+47,hand-held,test_paper,eoh,classroom,2,male google clothes,12,1,27
+48,hand-held,test_paper,rb1,pillar,5,male blue clothes hat,4,6,11
+49,hand-held,test_paper,rs2,wall,7,male blue clothes hat,4,6,11
+50,hand-held,test_paper,vb1,pillar,5,male black coat,9,4,23
+51,hand-held,test_paper,yo1h,classroom,2,female green coat,11,2,26
+52,hand-held,train,ahh,painting,17,male white t-shirt,1,1,1
+53,hand-held,train,do2h,classroom,2,male black hoodie hat,2,2,3
+54,hand-held,train,loh,classroom,2,male gray clothes,7,2,17
+55,hand-held,train,rlh,classroom,2,male watch,13,1,28
+56,hand-held,train,rs1,wall,7,male blue clothes hat,4,6,11
+57,hand-held,train,vs1,wall,7,male black coat,9,4,23

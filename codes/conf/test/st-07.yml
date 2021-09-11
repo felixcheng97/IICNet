@@ -1,0 +1,34 @@
+name: st-07
+model: InvNet
+gpu_ids: [0]
+
+datasets:
+  step01:  # the 1st test dataset
+    name: davis
+    use_full_frame: true
+    annotation_path: ../annotation/davis_num05_step01_test.json
+  
+#### network
+network:
+  input:
+    num_of_frames: 5
+    in_img_nc: 3
+  rel:
+    use_rel: true
+    nf: 64
+  down:
+    use_down: true
+    scale: 2
+    type: squeeze
+    order: ref
+    use_conv1x1: true
+  block:
+    type: DBNet
+    block_num: 10
+  cs:
+    out_nc: 3
+  quant: noise
+
+#### path
+path:
+  pretrain_model: ../experiments/st-07/models/latest.pth

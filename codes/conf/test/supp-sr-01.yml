@@ -1,0 +1,37 @@
+name: supp-sr-01
+model: InvNet
+gpu_ids: [0]
+
+datasets:
+  sr:  # the 1st test dataset
+    name: div2ksr
+    use_full_frame: true
+    annotation_path: ../annotation/div2ksr_X2_test.json
+    vis_step: 1
+  
+#### network
+network:
+  input:
+    num_of_frames: 1
+    in_img_nc: 3
+  rel:
+    use_rel: true
+    nf: 64
+  down:
+    use_down: true
+    scale: 2
+    type: squeeze
+    order: hl
+    use_conv1x1: true
+  block:
+    type: DBNet
+    block_num: 16
+  cs:
+    out_nc: 3
+  quant: noise
+
+#### path
+path:
+  pretrain_model: ../experiments/supp-sr-01/models/latest.pth
+
+

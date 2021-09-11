@@ -1,0 +1,88 @@
+#### general settings
+
+name: st-06  # this name is for experiment name. if you add "debug" inside this name, it will go to debug mode
+use_tb_logger: true
+model: InvNet
+gpu_ids: [0]
+
+#### datasets
+
+datasets:
+  train:
+    name: davis
+    use_full_frame: false
+    frame_size: 144
+    annotation_path: ../annotation/davis_num03_step05_train.json
+
+    use_shuffle: true
+    n_workers: 0
+    batch_size: 2
+
+  val:
+    name: davis
+    use_full_frame: false
+    frame_size: 144
+    annotation_path: ../annotation/davis_num03_step05_val.json
+    
+
+#### network (blocks)
+
+network:
+  input:
+    num_of_frames: 3
+    in_img_nc: 3
+  rel:
+    use_rel: true
+    nf: 64
+  down:
+    use_down: true
+    scale: 2
+    type: haar
+    order: hl
+    use_conv1x1: true
+  block:
+    type: DBNet
+    block_num: 10
+  cs:
+    out_nc: 3
+  quant: noise
+  criterions:
+    criterion_embedding_frame_basic: l2
+    criterion_embedding_frame_freq: true
+    criterion_fake_frames_basic: l1
+  lambdas:
+    lambda_embedding_frame_basic: 1
+    lambda_embedding_frame_freq: 0.001
+    lambda_fake_frames_basic: 0.4
+
+#### path
+
+path:
+  root: ~/
+  # pretrain_model: ../experiments/st-06/models/8.pth
+  # resume_state: ../experiments/st-06/training_state/8.state
+
+
+#### training settings: learning rate scheme, loss
+
+train:
+  lr: !!float 2e-4
+  beta1: 0.9
+  beta2: 0.999
+  niter: 500000
+  warmup_iter: -1
+
+  lr_scheme: MultiStepLR
+  lr_steps: [100000, 200000, 300000, 400000]
+  lr_gamma: 0.5
+
+  val_freq: 1000 # number of iterations to start a visualization
+  weight_decay: !!float 1e-5
+  gradient_clipping: 10
+
+#### logger
+
+logger:
+  print_freq: 100 # number of iterations to print a training progress
+  save_checkpoint_freq: 1000  # number of iterations to save a checkpoint (better to set it the same as val_freq)
+

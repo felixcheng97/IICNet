@@ -1,0 +1,35 @@
+name: hide-01
+model: InvNet
+gpu_ids: [0]
+
+datasets:
+  hide:  # the 1st test dataset
+    name: flicker
+    use_full_frame: true
+    annotation_path: ../annotation/flicker_num02_test.json
+    vis_step: 1
+  
+#### network
+network:
+  input:
+    num_of_frames: 2
+    in_img_nc: 3
+  rel:
+    use_rel: true
+    nf: 64
+  down:
+    use_down: false
+    scale: 1
+    type: haar
+    order: ref
+    use_conv1x1: true
+  block:
+    type: DBNet
+    block_num: 10
+  cs:
+    out_nc: 3
+  quant: noise
+
+#### path
+path:
+  pretrain_model: ../experiments/hide-01/models/latest.pth
