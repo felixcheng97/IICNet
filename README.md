@@ -1,7 +1,8 @@
 # IICNet - Invertible Image Conversion Net
 
 **Official PyTorch Implementation for [IICNet: A Generic Framework for Reversible Image Conversion (ICCV2021)](https://arxiv.org/abs/2109.04242).** 
-**[Demo Video](https://www.youtube.com/watch?v=Hwj05IrdUAo) | [Supplements](https://klchengad.student.ust.hk/research/iccv-iicnet/iicnet-supp.pdf)** 
+
+**External Links: [Pre-recorded Video](https://www.youtube.com/watch?v=Dji2iC_hUfo&t=225s) | [Demo Video](https://www.youtube.com/watch?v=Hwj05IrdUAo) | [Supplements](https://klchengad.student.ust.hk/research/iccv-iicnet/iicnet-supp.pdf)** 
 
 ![](./figures/front.png)
 
@@ -206,17 +207,18 @@ OMP_NUM_THREADS=4 python test.py -opt ./conf/test/<xxx>.yml
 ```
 
 ## Acknowledgement
-Some codes of this repository benefits from [Invertible Image Rescaling (IRN)](https://github.com/pkuxmq/Invertible-Image-Rescaling.git).
+Some codes of this repository benefit from [Invertible Image Rescaling (IRN)](https://github.com/pkuxmq/Invertible-Image-Rescaling.git).
 
 
 ## Citation
 If you find this work useful, please cite our paper:
 ```
 @inproceedings{cheng2021iicnet,
-    title = {IICNet: A Generic Framework for Reversible Image Conversion}, 
-    author = {Ka Leong Cheng and Yueqi Xie and Qifeng Chen},
+    title     = {IICNet: A Generic Framework for Reversible Image Conversion}, 
+    author    = {Ka Leong Cheng and Yueqi Xie and Qifeng Chen},
     booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},
-    year = {2021}
+    year      = {2021},
+    pages     = {1991--2000}
 }
 ```
 
