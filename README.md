@@ -12,11 +12,29 @@ Reversible image conversion (RIC) aims to build a reversible transformation betw
 
 
 ## Installation
+This repository is developed based on a Linux machine with the following:
+* Ubuntu 18.04.3
+* NVIDIA-SMI 440.33.01
+* Driver Version: 440.33.01
+* CUDA Version: 10.2
+* GPU: GeForce RTX 2080 Ti
+
 Clone this repository and set up the environment.
 ```bash
 git clone https://github.com/felixcheng97/IICNet.git
 cd IICNet/
 conda env create -f iic.yml
+conda activate iic
+```
+
+As requested, we also prepare a requirements.txt file for pip install.
+```bash
+git clone https://github.com/felixcheng97/IICNet.git
+cd IICNet/
+conda create --name iic python=3.5
+conda activate iic
+pip install --upgrade pip
+pip install -r requirements.txt
 ```
 
 ## Dataset Preparation
