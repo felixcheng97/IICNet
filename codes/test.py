@@ -127,6 +127,9 @@ for test_loader in test_loaders:
         # embedding_frame_ssim = util.calculate_ssim(cv2.cvtColor(embedding_frame_prime, cv2.COLOR_BGR2GRAY), cv2.cvtColor(ref_frame, cv2.COLOR_BGR2GRAY))
         test_metrics['embedding_frame_psnr'].append(embedding_frame_psnr)
         test_metrics['embedding_frame_ssim'].append(embedding_frame_ssim)
+        if vis_flag:
+            save_embedding_frame_prime_path = os.path.join(this_test_dir, 'embedding_frame_prime.png')
+            util.save_img(embedding_frame_prime, save_embedding_frame_prime_path)
         logger.info('{:20s} - embedding frame psnr: {:.6f} dB; embedding frame ssim: {:.6f}.'.format(scene, embedding_frame_psnr, embedding_frame_ssim))
 
         if vis_flag:
